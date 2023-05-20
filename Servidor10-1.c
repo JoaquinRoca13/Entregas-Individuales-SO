@@ -29,6 +29,7 @@ else if(codigo == 1){
 	p=strtok(NULL,”/”);
 	strcpy(nom,p);
 	pthread_mutex_lock(&milistaclientes,nom,sock_conn);
+	TomarNotaClienteConectado(&milistaclientes,nom,sock_conn);
 	pthread_mutex_unlock(&mutex);
 }
 else if(codigo ==2){
